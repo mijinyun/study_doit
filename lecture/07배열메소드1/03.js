@@ -7,7 +7,7 @@ let userList = [
 ];
 
 const result = userList.findIndex((user) => {
-    if(user.age < 19 ){
+    if(user.age > 26 ){
         return true;
     }
     return false;
