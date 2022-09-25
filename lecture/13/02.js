@@ -14,4 +14,4 @@ const x5 = new Bmw('red');
 console.log(x5.wheels);
 console.log(x5.drive());
 
-console.log(x5 instanceof Bmw);
+console.log(x5 instanceof Bmw); //true, x5는 Bmx의 생성자인스턴스인가.
