@@ -49,7 +49,7 @@ console.log(removeDash('0-9-7'));
 //----------------------------------------------//
 
 //hw3. 함수에 함수를 넣기  --ok
-type totalType = (x:string, y:Function, z: Function) => number;
+type totalType = (x:string, y:cutType, z: removeType) => number;
 let totalFunc :totalType = function (x,y,z) {
 
     let result = y(x);
