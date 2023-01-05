@@ -19,3 +19,8 @@ var removeDash = function (a) {
     return parseFloat(result);
 };
 console.log(removeDash('0-9-7'));
+var totalFunc = function (x, y, z) {
+    var result = y(x);
+    return z(result);
+};
+console.log(totalFunc('010-1111-2222', cutZero, removeDash));

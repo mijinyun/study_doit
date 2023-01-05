@@ -7,7 +7,7 @@ let functypetest :funcType = function (a) {
 
 
 // object 자료 안의 함수 타입지정(methods)
-// hw1. 함수에 타입지정
+// hw1. 함수에 타입지정--ok
 type memberType = {
     name : string,
     plusOne : (a:number) => number,
@@ -28,7 +28,7 @@ memberInfo.plusOne(3);
 //----------------------------------------------//
 
 
-// hw2. 함수 2개 생성 및 타입 지정
+// hw2. 함수 2개 생성 및 타입 지정--ok
 
 type cutType = (a:string) => string;
 let cutZero :cutType = function (a) {
@@ -45,3 +45,15 @@ let removeDash :removeType = function (a) {
 }
 console.log(removeDash('0-9-7'));
 
+
+//----------------------------------------------//
+
+//hw3. 함수에 함수를 넣기  --ok
+type totalType = (x:string, y:Function, z: Function) => number;
+let totalFunc :totalType = function (x,y,z) {
+
+    let result = y(x);
+    return z(result);
+}
+
+console.log(totalFunc('010-1111-2222',cutZero,removeDash));
